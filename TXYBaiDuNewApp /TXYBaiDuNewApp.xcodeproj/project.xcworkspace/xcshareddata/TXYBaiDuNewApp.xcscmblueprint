@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1994274E067974A16B73920FA6BB8F47E021A631",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1994274E067974A16B73920FA6BB8F47E021A631" : 0,
+    "C78076EFAA65EA94E61D2483AE291B410C27C507" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A8CF019A-8904-4975-AF83-C085DAC8CFA1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1994274E067974A16B73920FA6BB8F47E021A631" : "TXYBaiDuNew",
+    "C78076EFAA65EA94E61D2483AE291B410C27C507" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TXYBaiDuNewApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TXYBaiDuNewApp\/TXYBaiDuNewApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yunlinakeji\/TXYBaiDuNew.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1994274E067974A16B73920FA6BB8F47E021A631"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/goforit\/txy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C78076EFAA65EA94E61D2483AE291B410C27C507"
+    }
+  ]
+}

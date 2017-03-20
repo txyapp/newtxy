@@ -1,0 +1,1 @@
+{"uuid":"1231231","un":"","mcc":"","mnc":"","cl":"","cn":"","root":"","cpuabi1":"","cpuabi2":"","sysapi":"9.0.2","brand":"","model":"iPad3","uptime":"1482469801","vercode":"13.02","vername":"","corever":"","systype":"1","ip":"1.192.30.140","type":"117","custom":"{\"username\":\"lplplplp\",\"token\":\"1dbfae0bdc14dc5ad557c37be809e73e\"}","createtime":"2016-12-23 13:09:55"}

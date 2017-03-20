@@ -1,0 +1,1 @@
+framework module GoogleMapsM4B { umbrella header "GoogleMaps.h" export * module * { export * } }

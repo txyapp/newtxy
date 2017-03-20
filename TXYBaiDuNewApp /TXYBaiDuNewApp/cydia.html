@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title id="title">安装天下游</title>
+            <script type="text/javascript">
+                //ios系统版本
+                var iosSystemVer = '6.1';
+                iosSystemVer = parseFloat(iosSystemVer);
+                if (isNaN(iosSystemVer) || typeof(iosSystemVer) == "undefined") {
+                    iosSystemVer = 0.0;
+                }
+            //		    //deb包ID
+            //	        identifier = "app.weiphone.txyapp.lib";
+            //			//打开地址
+            //			myUrl = "txyapp://";
+            //			//deb下载源
+            //			mySource = "http://apt.feng.com/xiaoxia/";
+            //deb包ID
+            identifier = "com.txyapp.new";
+            //打开地址
+            myUrl = "txyapp://";
+            //deb下载源
+            //mySource = "http://apt.so/txyapp";
+            mySource = "http://apt.txyapp.com";
+            //名称
+            myName = "天下游";
+            //添加源
+            function addSource() {
+                try{
+                    if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                        cydia.addTrivialSource(mySource);
+                        cydia.refreshSources();
+                        window.setTimeout(function(){cydia.unload();}, 0);
+                    }
+                }catch(e){
+                    
+                }
+            }
+            //安装deb包
+            function installDeb() {
+                try{
+                    if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                        var package = cydia.getPackageById(identifier);
+                        if (package != null) {
+                            document.title = "安装天下游";
+                            cydia.installPackages([package]);
+                        }else{
+                            cydia.refreshSources();
+                        }
+                    }
+                }catch(e){
+                    
+                }
+            }
+            //延迟执行函数
+            function eventually(f) {
+                setTimeout(f, 500);
+            }
+            </script>
+    </head>
+    <style>
+        body{ background:#e9ebed; padding-top:150px;}
+        img{ border:0}
+        div{ text-align:center; margin-top:50px;}
+        #beikeshow{padding-top:10px; display:block}
+        </style>
+    
+    <body>
+        <div><img width="474" src="###########LOGO" /></div>
+        <div id="beikeshow"><a href="#" onclick="eventually(installDeb);"><img width="820" src="###########BTN" /></a></div>
+        <script type="text/javascript">
+            
+            try{
+                document.addEventListener("CydiaReloadData",function(){
+                                          // 检测已安装
+                                          var packages = cydia.getInstalledPackages();
+                                          for (var pk in packages) {
+                                          pk = packages[pk];
+                                          if (myName == pk.getField("name")) {
+                                          window.setTimeout(function(){window.open(myUrl);}, 1000);
+                                          return;
+                                          }
+                                          }
+                                          });
+                                          setTimeout(function(){
+                                                     
+                                                     if (typeof cydia != 'undefined' && typeof cydia.getAllSources != 'undefined') {
+                                                     // 源
+                                                     var isAdded = false;
+                                                     var sources = cydia.getAllSources();
+                                                     for (var source in sources) {
+                                                     source = sources[source];
+                                                     var rooturi = source.rooturi;
+                                                     if (rooturi == mySource) {
+                                                     isAdded = true;
+                                                     break;
+                                                     }
+                                                     }
+                                                     if (isAdded) {   
+                                                     // 刷新源
+                                                     //					   cydia.refreshSources();
+                                                     window.setTimeout(function(){cydia.unload();}, 0);
+                                                     } else {
+                                                     addSource();
+                                                     }
+                                                     }
+                                                     }, 0);
+            }catch(e){
+                
+            }
+        </script>
+    </body>
+</html>
